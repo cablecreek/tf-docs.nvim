@@ -1,0 +1,23 @@
+require("plenary.busted")
+
+local pickers = require("tf-docs.pickers")
+describe("tf-docs search", function()
+  it("get and check builtin pickers", function()
+    assert.are_equal(pickers.get("telescope"), pickers.telescope)
+    assert.are_equal(pickers.get("fzf"), pickers.fzf_lua)
+    assert.are_equal(pickers.get("snacks"), pickers.snacks)
+  end)
+
+  -- TODO: how to handle the deps?
+  describe("opens a picker", function()
+    it("opens telescope", function()
+      -- pickers.telescope("tf-docs")
+    end)
+    it("opens fzf", function()
+      -- pickers.fzf_lua("tf-docs")
+    end)
+    it("opens snacks", function()
+      -- pickers.snacks("tf-docs")
+    end)
+  end)
+end)

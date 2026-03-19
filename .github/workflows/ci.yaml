@@ -1,0 +1,34 @@
+name: tf-docs ci
+
+on:
+  push:
+    branches:
+      - main
+      - init
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: nightly
+      - uses: go-task/setup-task@v1
+        with:
+          version: 3.x
+
+      - name: setup
+        run: |
+          git clone --depth 1 https://github.com/nvim-lua/plenary.nvim ../plenary.nvim
+          git clone --depth 1 https://github.com/nvim-telescope/telescope.nvim ../telescope.nvim
+          git clone --depth 1 https://github.com/ibhagwan/fzf-lua ../fzf-lua
+          git clone --depth 1 https://github.com/folke/snacks.nvim ../snacks.nvim
+
+      - name: run tests
+        run: |
+          nvim --version
+          task test

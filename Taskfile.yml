@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+tasks:
+  default:
+    desc: list available tasks
+    cmds:
+      - task --list
+  test:
+    desc: run tests
+    cmds:
+      - nvim --headless -u scripts/minimal_init.lua -c "PlenaryBustedDirectory tests/ {post_error = true}"
+    silent: true

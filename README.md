@@ -17,16 +17,20 @@ Terraform provider documentation *inside* nvim - simple & fast
 ## 📦 Installation
 `lazy.nvim` minimal install with defaults
 ```lua
-{
+return {
   'cablecreek/tf-docs.nvim',
   dependencies = {
     'folke/snacks.nvim', -- snacks is the default picker
+
+    -- optional - renders md view 
+    -- 'MeanderingProgrammer/render-markdown.nvim',
+
   },
   opts = {
     providers = {
       -- add named providers here
       -- 'aws', 'gcp', 'k8s',
-      -- 
+      --
       -- or add a custom provider
     },
   },
@@ -60,7 +64,7 @@ opts = {
 ```
 
 ### 1. providers
-- create a `tf-docs.ProviderAdaptor` table 
+- take a look at the `/providers/` structure
 - as a rule of thumb for the provider config
   - it is legacy if the repo contains `website/docs/`
   - legacy also tends to use `.html.markdown`
@@ -68,9 +72,17 @@ opts = {
 ```lua
 opts = {
   providers = {
-    ---@type tf-docs.ProviderAdaptor
+    -- current doc structure
     {
-      name = 'aws', -- becomes the dir name and registry key, i.e. :TFDocs aws
+      name = 'my_k8s', -- becomes the dir name and registry key, i.e. :TFDocs my_k8s
+      repo_url = "https://github.com/hashicorp/terraform-provider-kubernetes.git",
+      search_title = "Terraform Kubernetes Docs",
+      file_extension = ".md",
+    },
+
+    -- legacy structure
+    {
+      name = 'my_aws', -- becomes the dir name and registry key, i.e. :TFDocs my_aws
       repo_url = "https://github.com/hashicorp/terraform-provider-aws.git",
       is_legacy_docs = true,
       search_title = "Terraform AWS Docs",
@@ -89,6 +101,9 @@ opts = {
   },
 }
 
+```
+
+```lua
 -- floating window
 opts = {
   win_config = {
@@ -137,7 +152,10 @@ local custom_snacks_picker = function(provider)
     end,
   }
 end
+```
 
+and then assign the picker
+```lua
 opts = {
   providers = {},
   picker = custom_snacks_picker, -- assign your picker  
@@ -147,7 +165,7 @@ opts = {
 
 ## Supported Providers
 | provider | repo | 
-| :--- |  ---: |
+| :--------------- |  ---------------: |
 |`aws`| https://github.com/hashicorp/terraform-provider-aws |
 | `gcp` | https://github.com/hashicorp/terraform-provider-google |
 | `k8s` | https://github.com/hashicorp/terraform-provider-kubernetes | 

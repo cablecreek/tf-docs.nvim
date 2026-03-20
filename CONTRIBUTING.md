@@ -20,7 +20,7 @@
 - [ ] doc construction could be cached and not generated each time. doesnt seem super slow at the moment 
 - [ ] search for under cursor (like gd, gr, etc.), need to also account for the "resource" or "data" resource
 - [ ] refine install tests (i.e. actually pull the repo and wait until done)
-- [ ] command for listing available providers to install?
+- [ ] command for listing available providers to install, some auto complete would be nice
 - [ ] uninstall tidy up
 
 ### known issues

@@ -167,11 +167,47 @@ opts = {
 
 ``` 
 
-## Supported Providers
-| provider | repo | 
-| :--------------- |  ---------------: |
-|`aws`| https://github.com/hashicorp/terraform-provider-aws |
-| `gcp` | https://github.com/hashicorp/terraform-provider-google |
-| `k8s` | https://github.com/hashicorp/terraform-provider-kubernetes | 
+## Supported Official Providers
+Currently, `tf-docs.nvim` supports the following providers
 
-- PR's for providers are always welcome! see [CONTRIBUTING.md]
+| Provider | Terraform Registry | Repository | Tier |
+|---|---|---|---|
+| aws | [aws](https://registry.terraform.io/providers/hashicorp/aws) | [aws](https://github.com/hashicorp/terraform-provider-aws) | Official |
+| azurerm | [azurerm](https://registry.terraform.io/providers/hashicorp/azurerm) | [azurerm](https://github.com/hashicorp/terraform-provider-azurerm) | Official |
+| google | [google](https://registry.terraform.io/providers/hashicorp/google) | [google](https://github.com/hashicorp/terraform-provider-google) | Official |
+| kubernetes | [kubernetes](https://registry.terraform.io/providers/hashicorp/kubernetes) | [kubernetes](https://github.com/hashicorp/terraform-provider-kubernetes) | Official |
+| aap | [aap](https://registry.terraform.io/providers/ansible/aap) | [aap](https://github.com/ansible/terraform-provider-aap) | Official |
+| ad | [ad](https://registry.terraform.io/providers/hashicorp/ad) | [ad](https://github.com/hashicorp/terraform-provider-ad) | Official |
+| archive | [archive](https://registry.terraform.io/providers/hashicorp/archive) | [archive](https://github.com/hashicorp/terraform-provider-archive) | Official |
+| awscc | [awscc](https://registry.terraform.io/providers/hashicorp/awscc) | [awscc](https://github.com/hashicorp/terraform-provider-awscc) | Official |
+| azuread | [azuread](https://registry.terraform.io/providers/hashicorp/azuread) | [azuread](https://github.com/hashicorp/terraform-provider-azuread) | Official |
+| azurestack | [azurestack](https://registry.terraform.io/providers/hashicorp/azurestack) | [azurestack](https://github.com/hashicorp/terraform-provider-azurestack) | Official |
+| boundary | [boundary](https://registry.terraform.io/providers/hashicorp/boundary) | [boundary](https://github.com/hashicorp/terraform-provider-boundary) | Official |
+| cloudinit | [cloudinit](https://registry.terraform.io/providers/hashicorp/cloudinit) | [cloudinit](https://github.com/hashicorp/terraform-provider-cloudinit) | Official |
+| consul | [consul](https://registry.terraform.io/providers/hashicorp/consul) | [consul](https://github.com/hashicorp/terraform-provider-consul) | Official |
+| dns | [dns](https://registry.terraform.io/providers/hashicorp/dns) | [dns](https://github.com/hashicorp/terraform-provider-dns) | Official |
+| external | [external](https://registry.terraform.io/providers/hashicorp/external) | [external](https://github.com/hashicorp/terraform-provider-external) | Official |
+| google-beta | [google-beta](https://registry.terraform.io/providers/hashicorp/google-beta) | [google-beta](https://github.com/hashicorp/terraform-provider-google-beta) | Official |
+| helm | [helm](https://registry.terraform.io/providers/hashicorp/helm) | [helm](https://github.com/hashicorp/terraform-provider-helm) | Official |
+| hcs | [hcs](https://registry.terraform.io/providers/hashicorp/hcs) | [hcs](https://github.com/hashicorp/terraform-provider-hcs) | Official |
+| hcp | [hcp](https://registry.terraform.io/providers/hashicorp/hcp) | [hcp](https://github.com/hashicorp/terraform-provider-hcp) | Official |
+| http | [http](https://registry.terraform.io/providers/hashicorp/http) | [http](https://github.com/hashicorp/terraform-provider-http) | Official |
+| ibm | [ibm](https://registry.terraform.io/providers/IBM-Cloud/ibm) | [ibm](https://github.com/IBM-Cloud/terraform-provider-ibm) | Official |
+| instana | [instana](https://registry.terraform.io/providers/instana/instana) | [instana](https://github.com/instana/terraform-provider-instana) | Official |
+| local | [local](https://registry.terraform.io/providers/hashicorp/local) | [local](https://github.com/hashicorp/terraform-provider-local) | Official |
+| nomad | [nomad](https://registry.terraform.io/providers/hashicorp/nomad) | [nomad](https://github.com/hashicorp/terraform-provider-nomad) | Official |
+| null | [null](https://registry.terraform.io/providers/hashicorp/null) | [null](https://github.com/hashicorp/terraform-provider-null) | Official |
+| ode | [ode](https://registry.terraform.io/providers/IBM/ode) | [ode](https://github.com/IBM/terraform-provider-ode) | Official |
+| random | [random](https://registry.terraform.io/providers/hashicorp/random) | [random](https://github.com/hashicorp/terraform-provider-random) | Official |
+| template | [template](https://registry.terraform.io/providers/hashicorp/template) | [template](https://github.com/hashicorp/terraform-provider-template) | Official |
+| tfe | [tfe](https://registry.terraform.io/providers/hashicorp/tfe) | [tfe](https://github.com/hashicorp/terraform-provider-tfe) | Official |
+| tfmigrate | [tfmigrate](https://registry.terraform.io/providers/hashicorp/tfmigrate) | [tfmigrate](https://github.com/hashicorp/terraform-provider-tfmigrate) | Official |
+| time | [time](https://registry.terraform.io/providers/hashicorp/time) | [time](https://github.com/hashicorp/terraform-provider-time) | Official |
+| tls | [tls](https://registry.terraform.io/providers/hashicorp/tls) | [tls](https://github.com/hashicorp/terraform-provider-tls) | Official |
+| turbonomic | [turbonomic](https://registry.terraform.io/providers/IBM/turbonomic) | [turbonomic](https://github.com/IBM/terraform-provider-turbonomic) | Official |
+| vault | [vault](https://registry.terraform.io/providers/hashicorp/vault) | [vault](https://github.com/hashicorp/terraform-provider-vault) | Official |
+| vault | [vault](https://registry.terraform.io/providers/hashicorp/vault) | [vault](https://github.com/hashicorp/terraform-provider-vault) | Official |
+| oci | [oci](https://registry.terraform.io/providers/oracle/oci) | [oci](https://github.com/oracle/terraform-provider-oci) | Partner |
+| alicloud | [alicloud](https://registry.terraform.io/providers/aliyun/alicloud) | [alicloud](https://github.com/aliyun/terraform-provider-alicloud) | Partner |
+
+

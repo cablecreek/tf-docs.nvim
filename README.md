@@ -41,7 +41,7 @@ return {
 }
 ```
 
-## Usage
+## 🚀 Usage
 ```lua
 TFDocs <provider> -- opens picker and browsing docs
 TFDocsSearch <provider> <type> <resource> -- opens doc in view
@@ -53,7 +53,7 @@ TFDocsSearch <provider> <type> <resource> -- opens doc in view
 2. docs window  
 3. picker 
 
-### default options
+### 📋 0. default options
 ```lua
 opts = {
   providers = {},
@@ -67,7 +67,7 @@ opts = {
 }
 ```
 
-### 1. providers
+### 🔌 1. providers
 - take a look at the `/providers/` structure
 - as a rule of thumb for the provider config
   - it is legacy if the repo contains `website/docs/`
@@ -96,7 +96,7 @@ opts = {
 }
 ```
 
-### 2. docs window
+### 📜 2. docs window
 ```lua
 -- split below
 opts = {
@@ -125,7 +125,7 @@ opts = {
 -- etc. 
 ```
 
-### 3. picker
+### 🔍 3. picker
 There are 2 functions that allow you to create a custom picker
 1. `get_doc_table` - returns a table with document items
 2. `open` - opens the selected file in the view 
@@ -167,7 +167,7 @@ opts = {
 
 ``` 
 
-## Supported Official Providers
+## 🛠️ Supported Official Providers
 Currently, `tf-docs.nvim` supports the following providers
 
 | Provider | Terraform Registry | Repository | Tier |

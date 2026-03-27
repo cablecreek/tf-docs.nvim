@@ -30,3 +30,10 @@ end, {
   nargs = "+",
   desc = "Open Terraform documentation for a provider",
 })
+
+-- lookup docs for resource under cursor
+vim.api.nvim_create_user_command("TFDocsUnderCursor", function()
+  require("tf-docs.cursor").lookup()
+end, {
+  desc = "Open Terraform documentation for the resource under cursor",
+})

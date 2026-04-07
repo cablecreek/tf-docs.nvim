@@ -37,6 +37,7 @@ M.providers = {
   ["null"] = "tf-docs.providers.hashicorp_null",
   ["ode"] = "tf-docs.providers.ibm_ode",
   ["random"] = "tf-docs.providers.hashicorp_random",
+  ["scalr"] = "tf-docs.providers.scalr_scalr",
   ["template"] = "tf-docs.providers.hashicorp_template",
   ["tfe"] = "tf-docs.providers.hashicorp_tfe",
   ["tfmigrate"] = "tf-docs.providers.hashicorp_tfmigrate",

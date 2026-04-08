@@ -45,6 +45,7 @@ return {
 ```lua
 TFDocs <provider> -- opens picker and browsing docs
 TFDocsSearch <provider> <type> <resource> -- opens doc in view
+TFDocsUnderCursor -- opens docs for resource under the cursor
 ```
 
 ## ⚙️ Configuration/Options 

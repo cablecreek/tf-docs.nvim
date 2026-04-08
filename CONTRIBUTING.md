@@ -13,12 +13,13 @@
   - [ ] registry
   - [ ] search
   - [ ] view
+  - [ ] under cursor <- might be overkill...
 - [ ] check custom opts examples are working
-- [ ] add other providers
+- [x] add other providers
 
 ### future direction and features
 - [ ] doc construction could be cached and not generated each time. doesnt seem super slow at the moment 
-- [ ] search for under cursor (like gd, gr, etc.), need to also account for the "resource" or "data" resource
+- [x] search for under cursor (like gd, gr, etc.), need to also account for the "resource" or "data" resource
 - [ ] refine install tests (i.e. actually pull the repo and wait until done)
 - [ ] command for listing available providers to install, some auto complete would be nice
 - [ ] uninstall tidy up

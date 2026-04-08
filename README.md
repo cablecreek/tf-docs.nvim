@@ -209,5 +209,6 @@ Currently, `tf-docs.nvim` supports the following providers
 | vault | [vault](https://registry.terraform.io/providers/hashicorp/vault) | [vault](https://github.com/hashicorp/terraform-provider-vault) | Official |
 | oci | [oci](https://registry.terraform.io/providers/oracle/oci) | [oci](https://github.com/oracle/terraform-provider-oci) | Partner |
 | alicloud | [alicloud](https://registry.terraform.io/providers/aliyun/alicloud) | [alicloud](https://github.com/aliyun/terraform-provider-alicloud) | Partner |
+| scalr | [scalr](https://registry.terraform.io/providers/Scalr/scalr) | [scalr](https://github.com/Scalr/terraform-provider-scalr) | Partner |
 
 
